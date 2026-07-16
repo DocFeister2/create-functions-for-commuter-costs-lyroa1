@@ -1,9 +1,9 @@
 #include <iostream>
 using namespace std;
 
-const double DOLLARS_PER_GALLON = 4.49;     // cost of gas per gallon
-const double MILES_PER_COMMUTE = 20.5;    // miles in one round-trip commute
-const double MILES_PER_GALLON = 36;       // car fuel efficiency
+const double DOLLARS_PER_GALLON = 4.89;     // cost of gas per gallon
+const double MILES_PER_COMMUTE = 29.4;    // miles in one round-trip commute
+const double MILES_PER_GALLON = 25;       // car fuel efficiency
 
 double myCommutes;
 double myCost;
@@ -17,7 +17,7 @@ double toCommutes(double gasDollars) {
   gasGallons = gasDollars / DOLLARS_PER_GALLON;
   gasMiles = gasGallons * MILES_PER_GALLON;
 
-  numCommutes = gasMiles; // TODO: That math is not right! Something is missing here...
+  numCommutes = gasMiles / MILES_PER_COMMUTE; // TODO: That math is not right! Something is missing here...
 
   return numCommutes;
 }
@@ -30,6 +30,15 @@ double toDollars(double commutes) {
   return totalCost;
 }
 */
+
+double toDollars(double commutes){
+
+  double Miles = commutes * MILES_PER_COMMUTE;
+  double gallons = Miles / MILES_PER_GALLON;
+  double totalCost = gallons * DOLLARS_PER_GALLON;
+  
+  return totalCost;
+}
 
 int main() {
 
