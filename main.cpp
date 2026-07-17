@@ -32,8 +32,14 @@ double toDollars(double commutes) {
 */
 
 double toDollars(double commutes){
-
-  double Miles = commutes * MILES_PER_COMMUTE;
+/*
+First I need to know how to start. 
+If commutes is the first input, what relates to commute. miles per commute.
+Then miles per comute...I check the last function miles per commute to miles.
+Then miles to miles per gallon.
+Miles per gallon to gallon, Finally Gallon to dollars per gallon = Dollars.
+*/
+  double Miles = commutes * MILES_PER_COMMUTE; 
   double gallons = Miles / MILES_PER_GALLON;
   double totalCost = gallons * DOLLARS_PER_GALLON;
   
